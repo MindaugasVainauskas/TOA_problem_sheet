@@ -6,6 +6,7 @@
     cond
       [(<= int 1) #f]  ;if number is less than or equal to 1 it cannot be prime
       ;Kinda using Erathostenes sieve for this...
+      [(= int 2) #t] ; 2 is first prime number
       [(= 0 (modulo int 2)) #f]
       [(= 0 (modulo int 3)) #f]
       [(= 0 (modulo int 5)) #f]
@@ -21,3 +22,4 @@
 (decide-prime 15) ;expected: false
 (decide-prime 787)
 (decide-prime 343)
+(decide-prime 2)

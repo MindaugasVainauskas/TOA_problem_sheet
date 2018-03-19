@@ -1,6 +1,6 @@
 #lang racket
 ;Problem 3. 2 Functions to shift list elements one to the
-;left and other to shift them one to the right.
+;left and other to shift them one element to the right.
 
 ;lcycle function
 (define (lcycle l)
@@ -9,6 +9,15 @@
                     (append (cdr l)
                            (cons (car l)'() ))))
 
-;Left cycle function test cases
+;Left cycle function test case
 (lcycle (list 1 2 3 4 5))
-(lcycle (list 'a 'b 'c 'd 'e))
+
+;rcycle function
+(define (rcycle l)
+                (if (null? l)
+                    '()
+                    (cons (car l)
+                           (append (cdr l) ))))
+
+;rcycle test cases
+(rcycle (list 1 2 3 4 5))

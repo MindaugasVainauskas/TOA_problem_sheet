@@ -1,0 +1,4 @@
+# This is a gitignore file for Theory of ALgorithms Racket problems assignment sheet.
+
+# bak files not needed in the main repo
+*.bak

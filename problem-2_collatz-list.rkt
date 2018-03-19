@@ -12,6 +12,6 @@
 
 ;Testing outcomes from the collatz list function
 (collatz-list 5)
-(collatz-list 10)
-(collatz-list 17)
+(collatz-list 8)
+(collatz-list 18)
 (collatz-list 6)

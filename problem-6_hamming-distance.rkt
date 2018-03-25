@@ -6,7 +6,7 @@
       (cond ((and (null? l) (null? r)) 0)  ; If both lists are null return 0
             ;If the current car elements from both lists are not same, increment not equal count by 1 and call function again
             ((not(= (car l) (car r)))(+ 1 (hamming-distance (cdr l) (cdr r))))            
-            (else (hamming-distance (cdr l) (cdr r)))  ; If both elements ar eeven call function again
+            (else (hamming-distance (cdr l) (cdr r)))  ; If both elements ar even call function again
             ))
 
 

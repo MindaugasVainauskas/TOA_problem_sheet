@@ -1,5 +1,5 @@
 #lang racket
-;Problem 5. Calculating hamming weight of a given binary list.
+;Problem 5. Calculating hamming weight of a given list.
 
 (define (hamming-weight l)
   (if (null? l); If list is null/empty

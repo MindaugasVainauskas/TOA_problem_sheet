@@ -4,10 +4,10 @@
 
 ;Main function
 (define (sod2 x y z)
-  (cond((and (null? x) (null? y) (null? z)) '())
-           ((= (modulo (+ (car x) (car y) (car z)) 2) 1)
-           (cons 1 (sod2 (cdr x) (cdr y) (cdr z))))
-           (else (cons 0 (sod2 (cdr x) (cdr y) (cdr z))))
+  (cond((and (null? x) (null? y) (null? z)) '()) ;If remainder of lists is null return the resultant list
+           ((= (modulo (+ (car x) (car y) (car z)) 2) 1) ; Check if modulo of car element sum is 1
+           (cons 1 (sod2 (cdr x) (cdr y) (cdr z)))) ; If above is true then add 1 in resultant list
+           (else (cons 0 (sod2 (cdr x) (cdr y) (cdr z)))) ; Otherwise add 0
        ))
 
 

@@ -5,8 +5,11 @@
 (define (decide-prime int)(
     cond
       [(<= int 1) #f]  ;if number is less than or equal to 1 it cannot be prime
-      ;Kinda using Erathostenes sieve for this...
+      ;Using Erathostenes sieve for this...
       [(= int 2) #t] ; 2 is first prime number
+      [(= int 3) #t]
+      [(= int 5) #t]
+      [(= int 7) #t]
       [(= 0 (modulo int 2)) #f]
       [(= 0 (modulo int 3)) #f]
       [(= 0 (modulo int 5)) #f]
@@ -20,6 +23,6 @@
 (decide-prime 4) ;expected: false
 (decide-prime 13) ;expected: true
 (decide-prime 15) ;expected: false
-(decide-prime 787)
-(decide-prime 343)
-(decide-prime 2)
+(decide-prime 787) ;expected true
+(decide-prime 343) ;expected false
+(decide-prime 2) ;expected true
